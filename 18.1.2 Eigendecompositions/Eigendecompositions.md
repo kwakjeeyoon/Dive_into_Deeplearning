@@ -12,21 +12,21 @@ Date: August 21, 2021
 
 ## Decomposing Matrics (고유값 분해)
 
-![Untitled](./Untitled.png)
+![Untitled](./Eigendecompositions/Untitled.png)
 
 위의 그림을 보면 벡터의 열백터가 고유값의 대각행렬과 곱해지면 각 고유값만큼 증가한 벡터가 된다. 
 
-![Untitled](./Untitled%201.png)
+![Untitled](./Eigendecompositions/Untitled%201.png)
 
 원래 벡터
 
-![Untitled](./Untitled%202.png)
+![Untitled](./Eigendecompositions/Untitled%202.png)
 
 고유벡터
 
-![Untitled](./Untitled%203.png)
+![Untitled](./Eigendecompositions/Untitled%203.png)
 
-![Untitled](./Untitled%204.png)
+![Untitled](./Eigendecompositions/Untitled%204.png)
 
 → 원래 벡터와 고유벡터를 안다면 각 원래 벡터의 열벡터를 고유벡터에 곱하면 고유값을 알 수 있다! (고유값 분해)
 
@@ -40,9 +40,9 @@ A의 모든 고유값은 A의 게르시고린 원판 중 하나의 안쪽에 놓
 
 와 같이 공식화 할 수 있다. 
 
-![Untitled](./Untitled%205.png)
+![Untitled](./Eigendecompositions/Untitled%205.png)
 
-![Untitled](./Untitled%206.png)
+![Untitled](./Eigendecompositions/Untitled%206.png)
 
 게르시고린의 정리로 구한 4개의 원판의 범위
 
@@ -52,16 +52,16 @@ A의 모든 고유값은 A의 게르시고린 원판 중 하나의 안쪽에 놓
 
 실제 neural network는 선형 레이어와 non-linear 함수의 반복이다. 하지만 여기서는 비선형 함수를 고려하지 않고 행렬 A를 여러번 곱한 것이라 가정해본다. 
 
-![Untitled](./Untitled%207.png)
+![Untitled](./Eigendecompositions/Untitled%207.png)
 
 이 모델이 초기화 될때, A는 가우시안 분포에서 랜덤하게 추출된다. 
 
 만약에 우리가 고양이 이미지를 input으로 넣고 예측하는 상황이라고 가정하면, A가 계속 곱해지면서 원래의 행렬을 매우 크게 만들거나 매우 작게 만들면 원래의 행렬과 매우 다른 예측값을 내게 된다. (크게 하면 input값에 매우 의존하게 되고 작게 하면 input값과 독립적인 output을 내게 됨) 그래서 우리는 growth 와 decay의 사이에서 잘 조절을 해야한다. 
 
-![Untitled](./Untitled%208.png)
+![Untitled](./Eigendecompositions/Untitled%208.png)
 
 벡터가 매우 커지게 되는 경우
 
-![Untitled](./Untitled%209.png)
+![Untitled](./Eigendecompositions/Untitled%209.png)
 
 1.97... 으로 안정적인 그래프
